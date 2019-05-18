@@ -9,13 +9,11 @@ services:
 
 before_install:
   - sudo apt-get update
-  - sudo apt-get install -y python-apt
-  - pip install --upgrade pip setuptools wheel
+  - sudo apt-get install -y python python-pip python-apt
+  - pip install --upgrade setuptools wheel
 
 install:
-  - pip install molecule
-  - pip install docker
-  - pip install docker-py
+  - pip install molecule ansible docker docker-py
 
 script:
   - molecule test
