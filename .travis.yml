@@ -9,6 +9,7 @@ services:
 
 before_install:
   - sudo apt-get update
+  - pip install --upgrade setuptools
 
 install:
   - pip install molecule
