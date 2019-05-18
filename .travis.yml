@@ -9,6 +9,9 @@ before_install:
   - sudo apt-get update
   - sudo apt-get install -y python-apt python-apt-common python-dev
 install:
-  - pip install molecule docker
+  - pip install psutil==5.4.6
+  - pip install ansible==2.7.10
+  - pip install molecule==2.20.1
+  - pi install docker
 script:
   - molecule test
